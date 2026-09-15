@@ -6,7 +6,13 @@ Eyesy は、ウェブページを暗い配色に変えたり、明るさや色�
 
 作者：[Goemon（@Goemon_Tokyo）](https://x.com/Goemon_Tokyo)
 
-[インストール](#インストール) · [使い方](#使い方) · [プライバシー](PRIVACY.md) · [開発への参加](CONTRIBUTING.md)
+[デモ動画](#デモ動画) · [インストール](#インストール) · [使い方](#使い方) · [プライバシー](PRIVACY.md) · [開発への参加](CONTRIBUTING.md)
+
+## デモ動画
+
+表示モードの切り替えや、サイトごとの明るさ・色味の調整を紹介します（約1分）。
+
+https://github.com/user-attachments/assets/c66c94b7-2bef-40b6-b346-2a20b9eb2288
 
 ## 表示例
 
