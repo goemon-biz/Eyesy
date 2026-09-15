@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eyesy</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <h1>Eyesy</h1>
+          <p id="hostLabel">このサイト</p>
+        </div>
+        <label class="switch" title="全体のオン・オフ">
+          <input id="enabledInput" type="checkbox">
+          <span></span>
+        </label>
+      </header>
+
+      <section class="section default-filter">
+        <label class="field">
+          <span>デフォルトのフィルター</span>
+          <select id="defaultModeInput">
+            <option value="dark">Dark</option>
+            <option value="filtered">Filter</option>
+            <option value="normal">Normal</option>
+          </select>
+        </label>
+        <div class="status-line" id="pageStatus">現在のページ: 確認中</div>
+      </section>
+
+      <nav class="scope-tabs" aria-label="設定の対象">
+        <button class="active" type="button" data-panel="globalPanel">全体設定</button>
+        <button type="button" data-panel="sitePanel">サイト別設定</button>
+      </nav>
+
+      <section id="globalPanel" class="panel active">
+        <section class="section">
+          <div class="section-title">調整するフィルター</div>
+          <div class="segmented global-filter" id="globalFilterGroup" role="group" aria-label="調整するフィルター">
+            <button class="active" type="button" data-global-filter="dark">Dark</button>
+            <button type="button" data-global-filter="filtered">Filter</button>
+          </div>
+        </section>
+
+        <section class="section sliders">
+          <label class="slider-row">
+            <span>明るさ</span>
+            <input id="globalBrightnessInput" type="range" min="70" max="125" step="1">
+            <output id="globalBrightnessOutput"></output>
+          </label>
+          <label class="slider-row">
+            <span>コントラスト</span>
+            <input id="globalContrastInput" type="range" min="70" max="135" step="1">
+            <output id="globalContrastOutput"></output>
+          </label>
+          <label class="slider-row">
+            <span>色の強さ</span>
+            <input id="globalSaturationInput" type="range" min="0" max="140" step="1">
+            <output id="globalSaturationOutput"></output>
+          </label>
+          <label class="slider-row">
+            <span>暖色</span>
+            <input id="globalTemperatureInput" type="range" min="0" max="100" step="1">
+            <output id="globalTemperatureOutput"></output>
+          </label>
+          <label class="slider-row">
+            <span>減光</span>
+            <input id="globalDimInput" type="range" min="0" max="70" step="1">
+            <output id="globalDimOutput"></output>
+          </label>
+        </section>
+
+        <section class="section compact">
+          <label class="check-row">
+            <input id="globalImageFilterInput" type="checkbox">
+            <span>小さい画像やアイコンも暗くする</span>
+          </label>
+        </section>
+
+        <footer class="footer footer-single">
+          <button type="button" id="resetGlobalButton">このフィルターを初期値に戻す</button>
+        </footer>
+      </section>
+
+      <section id="sitePanel" class="panel">
+        <section class="section">
+          <div class="section-title">今のサイトの表示</div>
+          <div class="segmented site-mode" id="siteModeGroup" role="group" aria-label="今のサイトの表示">
+            <button type="button" data-site-mode="auto">全体に従う</button>
+            <button type="button" data-site-mode="dark">Dark</button>
+            <button type="button" data-site-mode="filtered">Filter</button>
+            <button type="button" data-site-mode="normal">Normal</button>
+          </div>
+        </section>
+
+        <section class="section compact">
+          <label class="check-row">
+            <input id="siteTuningEnabledInput" type="checkbox">
+            <span>このサイトだけ細かく調整</span>
+          </label>
+        </section>
+
+        <section class="section sliders" id="siteTuningControls">
+          <label class="slider-row">
+            <span>明るさ</span>
+            <input id="siteBrightnessInput" type="range" min="70" max="125" step="1">
+            <output id="siteBrightnessOutput"></output>
+          </label>
+          <label class="slider-row">
+            <span>コントラスト</span>
+            <input id="siteContrastInput" type="range" min="70" max="135" step="1">
+            <output id="siteContrastOutput"></output>
+          </label>
+          <label class="slider-row">
+            <span>色の強さ</span>
+            <input id="siteSaturationInput" type="range" min="0" max="140" step="1">
+            <output id="siteSaturationOutput"></output>
+          </label>
+          <label class="slider-row">
+            <span>暖色</span>
+            <input id="siteTemperatureInput" type="range" min="0" max="100" step="1">
+            <output id="siteTemperatureOutput"></output>
+          </label>
+          <label class="slider-row">
+            <span>減光</span>
+            <input id="siteDimInput" type="range" min="0" max="70" step="1">
+            <output id="siteDimOutput"></output>
+          </label>
+        </section>
+
+        <section class="section compact" id="siteImageFilterControls">
+          <label class="check-row">
+            <input id="siteImageFilterInput" type="checkbox">
+            <span>小さい画像やアイコンも暗くする</span>
+          </label>
+        </section>
+
+        <footer class="footer footer-single">
+          <button type="button" id="resetSiteButton">このサイトの設定を消す</button>
+        </footer>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

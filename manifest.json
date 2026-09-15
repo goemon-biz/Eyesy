@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Eyesy",
+  "version": "0.1.0",
+  "description": "Reduces bright web pages with dark and filtered viewing modes.",
+  "action": {
+    "default_title": "Eyesy",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "commands": {
+    "toggle-current-website": {
+      "description": "Toggle Eyesy for the current website",
+      "suggested_key": {
+        "default": "Alt+Shift+2",
+        "mac": "Command+Shift+2"
+      }
+    },
+    "toggle-power-extension": {
+      "description": "Turn Eyesy on or off",
+      "suggested_key": {
+        "default": "Alt+Shift+3",
+        "mac": "Command+Shift+3"
+      }
+    },
+    "cycle-mode": {
+      "description": "Cycle the current website viewing mode",
+      "suggested_key": {
+        "default": "Alt+Shift+4",
+        "mac": "Command+Shift+4"
+      }
+    }
+  },
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"]
+}
