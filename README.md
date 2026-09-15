@@ -126,7 +126,7 @@ Eyesy は [Goemon（@Goemon_Tokyo）](https://x.com/Goemon_Tokyo) が開発し�
 
 個別のご相談・お問い合わせは、[X の DM](https://x.com/Goemon_Tokyo) へお寄せください。不具合報告や改善案は、このリポジトリの **Issues** でも受け付けています。
 
-[公式 GitHub リポジトリはこちら](https://github.com/goemon-biz/Eyesy)です。Eyesy が役に立ったら、Star を付けていただけると励みになります。再利用や紹介の際に、公式リポジトリへのリンクを添えていただけるとうれしいです。
+[公式 GitHub リポジトリはこちら](https://github.com/goemon-labs/Eyesy)です。Eyesy が役に立ったら、Star を付けていただけると励みになります。再利用や紹介の際に、公式リポジトリへのリンクを添えていただけるとうれしいです。
 
 ## ライセンス
 
